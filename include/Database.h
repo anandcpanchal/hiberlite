@@ -71,6 +71,12 @@ class Database : noncopyable
 		bean_ptr<C> loadBean(sqlid_t objId);
 
 		template<class C>
+		std::vector<sqlid_t> getBeanIds(std::string condition_a);
+		
+		template<class C>
+		std::vector< bean_ptr<C> > getAllBeans(std::string condition_a);
+
+		template<class C>
 		std::vector<sqlid_t> getBeanIds();
 
 		template<class C>
